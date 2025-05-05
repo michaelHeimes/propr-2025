@@ -1,0 +1,9 @@
+.insights.custom-block {
+	article {
+		hr {
+			width: 100%;
+			margin: 0;
+			border-bottom: clamp(0.219rem, 0.186rem + 0.141vw, 0.313rem) solid $black;
+		}
+	}
+}
