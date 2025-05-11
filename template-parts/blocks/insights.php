@@ -49,28 +49,35 @@ if($source == 'selected') {
     <div class="grid-x grid-padding-x">
         <?php if ( $posts ) :?>
             <ul class="cell small-12 medium-8 large-6 no-bullet posts-wrap">
-                <?php foreach($posts as $post):
+                <?php $i = 1; foreach($posts as $post):
                     setup_postdata($post);    
                     $link = get_the_permalink($post);
                     $title = $post->post_title;
                 ?>
                     <li>
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <a class="grid-x grid-padding-x" href="<?=esc_url($link);?>" rel="bookmark">
+                            <a class="grid-x align-middle" href="<?=esc_url($link);?>" rel="bookmark">
+                                <?php if( $i == 1 ):?>
+                                    <div class="cell small-12">
+                                        <hr>
+                                    </div>
+                                <?php endif;?>
                                 <div class="cell small-3">
                                     <b>POST:</b>
                                 </div>
-                                <div class="cell auto">
+                                <div class="cell auto weight-medium">
                                     <?=$title;?>
                                 </div>
                                 <div class="cell shrink">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="27.596" viewBox="0 0 40 27.596"><path data-name="Path 25" d="m17.3 0 10.695 10.574H0v6.448h28L17.3 27.6h8.981L40 13.787 26.285 0Z"/></svg>
                                 </div>
-                                <hr>
+                                <div class="cell small-12">
+                                    <hr>
+                                </div>
                             </a>
                         </article>
                     </li>
-                <?php endforeach;
+                <?php $i++; endforeach;
                     wp_reset_postdata();
                 ?>
             </ul>

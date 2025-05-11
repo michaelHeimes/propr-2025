@@ -2,15 +2,15 @@
 .module.block,
 blockquote {
 	&:not(.no-top-spacing) {
-		margin-top: clamp(5.381rem, 4.569rem + 3.465vw, 7.688rem);
+		margin-top: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 	}
 	&:not(.no-bottom-spacing) {
-		margin-bottom: clamp(5.381rem, 4.569rem + 3.465vw, 7.688rem);
+		margin-bottom: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 	}
 }
 
 .wp-block-columns {
-	gap: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+	gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 	& + .wp-block-columns {
 		margin-top: 0;
 	}
@@ -23,8 +23,8 @@ blockquote {
 		// 	margin-bottom: $mediumGutter;
 		// }
 		&.black-drop-shadow {
-			margin-right: clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem);
-			margin-bottom: clamp(2.669rem, 2.266rem + 1.718vw, 3.813rem);
+			margin-right: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
+			margin-bottom: clamp(2.669rem, 2.391rem + 1.185vw, 3.813rem);
 		}
 	}	
 	&:has(.black-drop-shadow) {

@@ -7,7 +7,7 @@ button,
 .wp-element-button,
 .wp-block-button__link {
 	line-height: 1.4;
-	font-size: clamp(1.125rem, 0.861rem + 1.127vw, 1.875rem);
+	font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
 	@include letter-spacing(-15);
 }
 
@@ -24,7 +24,7 @@ a {
 
 h1,
 .h1 {
-	font-size: clamp(2.625rem, 2.229rem + 1.69vw, 3.75rem);
+	font-size: clamp(2.625rem, 2.352rem + 1.165vw, 3.75rem);
 	line-height: 1.2;
 	font-weight: 500;
 	margin-bottom: 1em;
@@ -32,8 +32,12 @@ h1,
 
 h2,
 .h2 {
-	font-size: clamp(2.188rem, 1.857rem + 1.408vw, 3.125rem);
+	font-size: clamp(2.188rem, 1.961rem + 0.97vw, 3.125rem);
 	line-height: 1.2;
 	font-weight: 500;
 	margin-bottom: .44em;
+}
+
+.weight-medium {
+	font-weight: 500;
 }

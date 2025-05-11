@@ -1,5 +1,5 @@
 .bordered {
-  border: clamp(0.438rem, 0.371rem + 0.282vw, 0.625rem) solid #000;
+  border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid #000;
 }
 .bordered.wp-block-column, .bordered.block-core-columns {
   padding: 30px;
@@ -10,19 +10,19 @@
 }
 
 .ps-40 {
-  padding-left: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-left: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .pt-40 {
-  padding-top: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-top: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .pb-40 {
-  padding-bottm: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-bottom: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .pe-40 {
-  padding-right: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-right: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .no-bullet {
@@ -42,20 +42,43 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.add-pointer-to-link a .pointer-link:hover::after, .add-pointer-to-link a .pointer-link:focus::after {
+  animation: wobbleAround 0.6s infinite;
+}
 
+@keyframes wobbleAround {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-3px, 2px) rotate(-5deg);
+  }
+  40% {
+    transform: translate(2px, -3px) rotate(5deg);
+  }
+  60% {
+    transform: translate(3px, 3px) rotate(-5deg);
+  }
+  80% {
+    transform: translate(-2px, -2px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
 .wp-block-columns:not(.no-top-spacing),
 .module.block:not(.no-top-spacing),
 blockquote:not(.no-top-spacing) {
-  margin-top: clamp(5.381rem, 4.569rem + 3.465vw, 7.688rem);
+  margin-top: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 }
 .wp-block-columns:not(.no-bottom-spacing),
 .module.block:not(.no-bottom-spacing),
 blockquote:not(.no-bottom-spacing) {
-  margin-bottom: clamp(5.381rem, 4.569rem + 3.465vw, 7.688rem);
+  margin-bottom: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 }
 
 .wp-block-columns {
-  gap: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 .wp-block-columns + .wp-block-columns {
   margin-top: 0;
@@ -66,8 +89,8 @@ blockquote:not(.no-bottom-spacing) {
   }
 }
 .wp-block-columns .wp-block-column.black-drop-shadow {
-  margin-right: clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem);
-  margin-bottom: clamp(2.669rem, 2.266rem + 1.718vw, 3.813rem);
+  margin-right: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
+  margin-bottom: clamp(2.669rem, 2.391rem + 1.185vw, 3.813rem);
 }
 @media print, screen and (max-width: 56.24875em) {
   .wp-block-columns:has(.black-drop-shadow) {
@@ -91,7 +114,7 @@ blockquote:not(.no-bottom-spacing) {
 .editor-visual-editor .wp-element-button,
 .editor-visual-editor .wp-block-button__link {
   line-height: 1.4;
-  font-size: clamp(1.125rem, 0.861rem + 1.127vw, 1.875rem);
+  font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
   letter-spacing: -0.015em;
 }
 .editor-visual-editor p,
@@ -105,17 +128,20 @@ blockquote:not(.no-bottom-spacing) {
 }
 .editor-visual-editor h1,
 .editor-visual-editor .h1 {
-  font-size: clamp(2.625rem, 2.229rem + 1.69vw, 3.75rem);
+  font-size: clamp(2.625rem, 2.352rem + 1.165vw, 3.75rem);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 1em;
 }
 .editor-visual-editor h2,
 .editor-visual-editor .h2 {
-  font-size: clamp(2.188rem, 1.857rem + 1.408vw, 3.125rem);
+  font-size: clamp(2.188rem, 1.961rem + 0.97vw, 3.125rem);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 0.44em;
+}
+.editor-visual-editor .weight-medium {
+  font-weight: 500;
 }
 .editor-visual-editor .wp-element-button,
 .editor-visual-editor .wp-block-button__link {
@@ -134,7 +160,7 @@ blockquote:not(.no-bottom-spacing) {
   text-align: center;
   cursor: pointer;
   line-height: 1.4;
-  font-size: clamp(1.125rem, 0.861rem + 1.127vw, 1.875rem);
+  font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
   letter-spacing: -0.015em;
   background-color: #fff;
   color: #000;

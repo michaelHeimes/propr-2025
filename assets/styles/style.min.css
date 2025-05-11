@@ -6800,7 +6800,12 @@ Stylesheet: Global Stylesheet
 
 *************************************************/
 #page.site {
-  padding-top: clamp(4.9rem, 4.161rem + 3.155vw, 7rem);
+  padding-top: clamp(4.9rem, 4.39rem + 2.175vw, 7rem);
+}
+
+.grid-container {
+  padding-right: clamp(1.875rem, 1.723rem + 0.647vw, 2.5rem);
+  padding-left: clamp(1.875rem, 1.723rem + 0.647vw, 2.5rem);
 }
 
 /*********************
@@ -6836,10 +6841,12 @@ button,
 .wp-element-button {
   font-weight: 700;
   position: relative;
-  padding-right: clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem);
-  margin-bottom: clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem);
-  width: calc(100% - clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem)) !important;
-  border: clamp(0.438rem, 0.371rem + 0.282vw, 0.625rem) solid #000;
+  padding-top: clamp(1.488rem, 1.333rem + 0.66vw, 2.125rem);
+  padding-bottom: clamp(1.531rem, 1.372rem + 0.68vw, 2.188rem);
+  padding-right: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
+  margin-bottom: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
+  width: calc(100% - clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem)) !important;
+  border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid #000;
 }
 button:before,
 .button:before,
@@ -6847,13 +6854,22 @@ button:before,
 .wp-block-button__link:before {
   content: "";
   display: block;
-  border: clamp(0.438rem, 0.371rem + 0.282vw, 0.625rem) solid #000;
+  border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid #000;
   position: absolute;
   z-index: -1;
-  width: calc(100% + clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem));
-  height: calc(100% + clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem));
-  top: clamp(0.35rem, 0.297rem + 0.225vw, 0.5rem);
-  left: clamp(0.438rem, 0.371rem + 0.282vw, 0.625rem);
+  width: calc(100% + clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem));
+  height: calc(100% + clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem));
+  top: clamp(0.35rem, 0.314rem + 0.155vw, 0.5rem);
+  left: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem);
+}
+button span,
+.button span,
+.wp-element-button span,
+.wp-block-button__link span {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.38em;
 }
 
 /*********************
@@ -7323,7 +7339,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 }
 
 .bordered {
-  border: clamp(0.438rem, 0.371rem + 0.282vw, 0.625rem) solid #000;
+  border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid #000;
 }
 .bordered.wp-block-column, .bordered.block-core-columns {
   padding: 30px;
@@ -7335,19 +7351,19 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 }
 
 .ps-40 {
-  padding-left: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-left: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .pt-40 {
-  padding-top: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-top: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .pb-40 {
-  padding-bottm: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-bottom: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .pe-40 {
-  padding-right: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  padding-right: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 
 .no-bullet {
@@ -7367,7 +7383,64 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.add-pointer-to-link a .pointer-link:hover::after, .add-pointer-to-link a .pointer-link:focus::after {
+  -webkit-animation: wobbleAround 0.6s infinite;
+          animation: wobbleAround 0.6s infinite;
+}
 
+@-webkit-keyframes wobbleAround {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 2px) rotate(-5deg);
+            transform: translate(-3px, 2px) rotate(-5deg);
+  }
+  40% {
+    -webkit-transform: translate(2px, -3px) rotate(5deg);
+            transform: translate(2px, -3px) rotate(5deg);
+  }
+  60% {
+    -webkit-transform: translate(3px, 3px) rotate(-5deg);
+            transform: translate(3px, 3px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translate(-2px, -2px) rotate(5deg);
+            transform: translate(-2px, -2px) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes wobbleAround {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 2px) rotate(-5deg);
+            transform: translate(-3px, 2px) rotate(-5deg);
+  }
+  40% {
+    -webkit-transform: translate(2px, -3px) rotate(5deg);
+            transform: translate(2px, -3px) rotate(5deg);
+  }
+  60% {
+    -webkit-transform: translate(3px, 3px) rotate(-5deg);
+            transform: translate(3px, 3px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translate(-2px, -2px) rotate(5deg);
+            transform: translate(-2px, -2px) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+}
 p,
 .p,
 ul,
@@ -7377,7 +7450,7 @@ button,
 .wp-block-button__link,
 .wp-element-button {
   line-height: 1.4;
-  font-size: clamp(1.125rem, 0.861rem + 1.127vw, 1.875rem);
+  font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
   letter-spacing: -0.015em;
 }
 
@@ -7394,7 +7467,7 @@ a {
 
 h1,
 .h1 {
-  font-size: clamp(2.625rem, 2.229rem + 1.69vw, 3.75rem);
+  font-size: clamp(2.625rem, 2.352rem + 1.165vw, 3.75rem);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 1em;
@@ -7402,10 +7475,14 @@ h1,
 
 h2,
 .h2 {
-  font-size: clamp(2.188rem, 1.857rem + 1.408vw, 3.125rem);
+  font-size: clamp(2.188rem, 1.961rem + 0.97vw, 3.125rem);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 0.44em;
+}
+
+.weight-medium {
+  font-weight: 500;
 }
 
 header.site-header {
@@ -7530,16 +7607,16 @@ footer#colophon .copyright {
 .wp-block-columns:not(.no-top-spacing),
 .module.block:not(.no-top-spacing),
 blockquote:not(.no-top-spacing) {
-  margin-top: clamp(5.381rem, 4.569rem + 3.465vw, 7.688rem);
+  margin-top: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 }
 .wp-block-columns:not(.no-bottom-spacing),
 .module.block:not(.no-bottom-spacing),
 blockquote:not(.no-bottom-spacing) {
-  margin-bottom: clamp(5.381rem, 4.569rem + 3.465vw, 7.688rem);
+  margin-bottom: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 }
 
 .wp-block-columns {
-  gap: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+  gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
 }
 .wp-block-columns + .wp-block-columns {
   margin-top: 0;
@@ -7553,8 +7630,8 @@ blockquote:not(.no-bottom-spacing) {
   }
 }
 .wp-block-columns .wp-block-column.black-drop-shadow {
-  margin-right: clamp(0.875rem, 0.743rem + 0.563vw, 1.25rem);
-  margin-bottom: clamp(2.669rem, 2.266rem + 1.718vw, 3.813rem);
+  margin-right: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
+  margin-bottom: clamp(2.669rem, 2.391rem + 1.185vw, 3.813rem);
 }
 @media print, screen and (max-width: 56.24875em) {
   .wp-block-columns:has(.black-drop-shadow) {
@@ -7567,8 +7644,25 @@ blockquote:not(.no-bottom-spacing) {
 }
 
 .insights.custom-block article hr {
-  width: 100%;
   margin: 0;
-  border-bottom: clamp(0.219rem, 0.186rem + 0.141vw, 0.313rem) solid #000;
+  border-bottom: clamp(0.219rem, 0.196rem + 0.097vw, 0.313rem) solid #000;
+}
+.insights.custom-block article a {
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.insights.custom-block article a .cell {
+  padding: 15px 0;
+}
+@media print, screen and (min-width: 48.8125em) {
+  .insights.custom-block article a {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+  .insights.custom-block article a .cell {
+    padding: 20px 0;
+  }
 }
 /*# sourceMappingURL=style.min.css.map */

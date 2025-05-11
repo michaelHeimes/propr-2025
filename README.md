@@ -19,4 +19,6 @@ Note: `.no-sidebar` styles are automatically loaded.
 * Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
 * Licensed under GPLv2 or later. :) Use it to make something cool.
 
+// Clamp settings: 375-1920
+
 

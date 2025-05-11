@@ -1,9 +1,20 @@
 .insights.custom-block {
 	article {
 		hr {
-			width: 100%;
 			margin: 0;
-			border-bottom: clamp(0.219rem, 0.186rem + 0.141vw, 0.313rem) solid $black;
+			border-bottom:clamp(0.219rem, 0.196rem + 0.097vw, 0.313rem) solid $black;
+		}
+		a {
+			column-gap: $smallGutter;
+			.cell {
+				padding:  calc($smallGutter * .5) 0; 
+			}
+			@include breakpoint(medium) {
+				column-gap: $mediumGutter;
+				.cell {
+					padding:  calc($mediumGutter * .5) 0; 
+				}
+			}
 		}
 	}
 }
