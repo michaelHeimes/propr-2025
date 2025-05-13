@@ -7,7 +7,7 @@
  $header_logo_global = get_field('header_logo_global', 'option') ?? null;
 ?>
 
-<div class="top-bar-wrap grid-container fluid">
+<div class="top-bar-wrap grid-container">
 
 	<div class="top-bar" id="top-bar-menu">
 	
@@ -44,14 +44,14 @@
 			</ul>
 						
 		</div>
-		<div class="top-bar-right show-for-tablet">
+		<div class="top-bar-right show-for-xlarge">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
 					<?php trailhead_top_nav();?>
 				</div>
 			</div>
 		</div>
-		<div class="menu-toggle-wrap top-bar-right float-right hide-for-tablet">
+		<div class="menu-toggle-wrap top-bar-right float-right hide-for-xlarge">
 			<ul class="menu">
 				<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
 				<li><a id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>

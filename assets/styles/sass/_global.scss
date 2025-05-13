@@ -43,10 +43,19 @@ svg {
 	@extend .button;
 }
 
-button,
+body .alm-btn-wrap .alm-load-more-btn,
+body .alm-btn-wrap .alm-load-more-btn.loading {
+	background: $white;
+}
+
+body .alm-btn-wrap .alm-load-more-btn,
+#sc-embed button,
+button:not(.no-style),
 .button,
 .wp-element-button,
 .wp-block-button__link {
+	height: auto;
+	color: $black;
 	font-weight: 700;
 	position: relative;
 	padding-top: clamp(1.488rem, 1.333rem + 0.66vw, 2.125rem);
@@ -55,7 +64,7 @@ button,
 	margin-bottom: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
 	width: calc(100% - clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem)) !important;
 	border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid $black;
-	&:before {
+	&:after {
 		content: '';
 		display: block;
 		border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid $black;
@@ -71,6 +80,46 @@ button,
 		text-decoration: underline;
 		text-decoration-thickness: 0.15em;
 		text-underline-offset: .38em;
+	}
+	&.loading,
+	&:hover,
+	&:focus {
+		color: $black;
+		background: $white;
+		&:after {
+			background: repeating-linear-gradient(
+			  -45deg,
+			  black,
+			  black 1px,
+			  transparent 1px,
+			  transparent 4px
+			);
+		}
+	}
+	&.loading:before {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&.done {
+		display: none;
+	}
+}
+
+body #sc-embed button {
+	border-radius: 0 !important;
+	background: $white !important;
+	&:before {
+		display: none;
+	}
+	&:hover,
+	&:focus {
+		background: $white repeating-linear-gradient(
+		  -45deg,
+		  black,
+		  black 1px,
+		  transparent 1px,
+		  transparent 4px
+		) !important;
 	}
 }
 

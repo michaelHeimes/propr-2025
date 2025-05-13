@@ -1,0 +1,65 @@
+body {
+	.gform-theme--foundation .gfield {
+		input {
+			@extend .p;
+			@extend .bordered;
+			height: clamp(3.806rem, 3.41rem + 1.689vw, 5.438rem);
+			padding: 0 0.78em;
+			&::placeholder {
+				@extend .p;
+			}
+		}
+	}
+	.has-inline-form {
+		.gform-theme--foundation {
+			.gfield {
+				input {
+					border-right-width: 0;
+				}
+			}
+			form {
+				display: flex;
+				.gform-body.gform_body {
+					flex: 1;
+				}	
+				.gform_footer.before {
+					flex: 0 0 auto;
+					margin: 0;
+					button.gform_button.button {
+						background: transparent;
+						box-shadow: none;
+						@extend .bordered;
+						background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="39.137" height="33.079" viewBox="0 0 39.137 33.079"><path data-name="Path 12" d="m13.25 0 13.232 13.232H0v6.616h26.482L13.25 33.079h9.35l16.54-16.54L22.6 0Z"/></svg>');
+						background-repeat: no-repeat;
+						background-size: clamp(1.706rem, 1.529rem + 0.757vw, 2.438rem);
+						background-position: center; 
+						width: clamp(4.375rem, 3.92rem + 1.942vw, 6.25rem) !important;
+						padding: 1rem;
+						position: relative;
+						&:after {
+							content: '';
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+						}
+						&:hover,
+						&:focus {
+							&:after {
+								background: repeating-linear-gradient(
+								  -45deg,
+								  black,
+								  black 1px,
+								  transparent 1px,
+								  transparent 4px
+								);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

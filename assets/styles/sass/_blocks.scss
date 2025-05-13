@@ -17,6 +17,11 @@ blockquote {
 	@include breakpoint(medium down) {
 		flex-direction: column;
 	}
+	@include breakpoint(medium only) {
+		> .wp-block-column {
+			flex-basis: auto !important;
+		}
+	}
 	.wp-block-column {
 		// margin-bottom: $smallGutter;
 		// @include breakpoint(medium) {

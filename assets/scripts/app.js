@@ -102,12 +102,12 @@
     
     _app.fixed_nav_hack = function() {
         $('.off-canvas').on('opened.zf.offCanvas', function() {
-            $('header.site-header').addClass('off-canvas-content is-open-right has-transition-push');		
+            $('body').addClass('mobile-nav-opened');		
             $('header.site-header #top-bar-menu .menu-toggle-wrap a#menu-toggle').addClass('clicked');	
         });
         
         $('.off-canvas').on('close.zf.offCanvas', function() {
-            $('header.site-header').removeClass('off-canvas-content is-open-right has-transition-push');
+            $('body').removeClass('mobile-nav-opened');		
             $('header.site-header #top-bar-menu .menu-toggle-wrap a#menu-toggle').removeClass('clicked');
         });
         
@@ -144,19 +144,64 @@
     }
     
     _app.link_pointer = function() {
-const links = document.querySelectorAll('.add-pointer-to-link a');
+        const links = document.querySelectorAll('.add-pointer-to-link a');
     
-    links.forEach(link => {
-        const span = document.createElement('span');
-        span.classList.add('pointer-link');
+        links.forEach(link => {
+            const span = document.createElement('span');
+            span.classList.add('pointer-link');
+        
+            // Move all child nodes of the link into the span
+            while (link.firstChild) {
+                span.appendChild(link.firstChild);
+            }
+        
+            link.appendChild(span);
+        });
+    }
     
-        // Move all child nodes of the link into the span
-        while (link.firstChild) {
-            span.appendChild(link.firstChild);
+    _app.insights_filter = function() {
+        /**
+         * Filter button click event.
+         */
+        function filterClick(event) {
+            event.preventDefault();
+        
+            // Exit if button active.
+            if (this.classList.contains('active')) {
+                return;
+            }
+        
+            // Get .active element.
+            var activeEl = document.querySelector('.alm-filter-nav button.active');
+            if (activeEl) {
+                activeEl.classList.remove('active');
+            }
+        
+            // Add active class.
+            this.classList.add('active');
+        
+            // Set filter params
+            var transition = 'fade';
+            var speed = 250;
+            var data = this.dataset;
+        
+            // Call core Ajax Load More `filter` function.
+            // @see https://connekthq.local/plugins/ajax-load-more/docs/public-functions/#filter
+            ajaxloadmore.filter(transition, speed, data);
         }
-    
-        link.appendChild(span);
-    });
+        
+        // Get all filter buttons.
+        var filter_buttons = document.querySelectorAll('.alm-filter-nav button');
+        if (filter_buttons) {
+            // Set initial active item.
+            filter_buttons[0].classList.add('active');
+        
+            // Loop buttons.
+            [].forEach.call(filter_buttons, function (button) {
+                // Add button click event.
+                button.addEventListener('click', filterClick);
+            });
+        }
     }
             
     _app.init = function() {
@@ -164,12 +209,13 @@ const links = document.querySelectorAll('.add-pointer-to-link a');
         // Standard Functions
         _app.foundation_init();
         _app.emptyParentLinks();
-        //_app.fixed_nav_hack();
+        _app.fixed_nav_hack();
         //_app.display_on_load();
         
         // Custom Functions
         //_app.mobile_takover_nav();
         _app.link_pointer();
+        _app.insights_filter();
     }
     
     

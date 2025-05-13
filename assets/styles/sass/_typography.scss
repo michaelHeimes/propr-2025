@@ -1,3 +1,8 @@
+body .wp-block-column {
+	word-break: normal;
+	overflow-wrap: normal;
+}
+body .alm-btn-wrap .alm-load-more-btn,
 p,
 .p,
 ul,
@@ -9,6 +14,14 @@ button,
 	line-height: 1.4;
 	font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
 	@include letter-spacing(-15);
+}
+
+.has-medium-font-size {
+	font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
+}
+
+.has-large-font-size {
+	font-size: clamp(2.188rem, 1.961rem + 0.97vw, 3.125rem);
 }
 
 p,

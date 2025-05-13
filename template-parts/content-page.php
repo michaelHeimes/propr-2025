@@ -16,7 +16,6 @@
             <div class="grid-x grid-padding-x">
                 <div class="cell small-12">
                     <?php the_content();?>
-		            <?php get_template_part('template-parts/loop-modules');?>
                 </div>
             </div>
         </div>

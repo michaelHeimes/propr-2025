@@ -1,7 +1,11 @@
+.space-between {
+	justify-content: space-between;
+}
 .bordered {
 	border: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem) solid $black;
 	&.wp-block-column,
-	&.block-core-columns {
+	&.block-core-columns,
+	&.padded {
 		padding: 30px;
 	}
 }

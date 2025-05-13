@@ -319,3 +319,6 @@ require_once(get_template_directory().'/inc/gutenberg-customizations.php');
 
 // Image Sizes
 require_once(get_template_directory().'/inc/image-sizes.php');
+
+// Gravity Forms
+require_once(get_template_directory().'/inc/gravity-forms.php');
