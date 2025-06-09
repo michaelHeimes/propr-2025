@@ -1,13 +1,42 @@
 .wp-block-columns,
+.wp-block-group,
 .module.block,
-blockquote {
+.wp-block-pullquote {
 	&:not(.no-top-spacing) {
 		margin-top: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 	}
 	&:not(.no-bottom-spacing) {
 		margin-bottom: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
 	}
+	cite {
+		font-size: .9em;
+	}
 }
+
+.wp-block-columns.grid {
+	.wp-block-group,
+	.module.block {
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: $smallGutter;
+		@include breakpoint(medium) {
+			margin-bottom: $mediumGutter;
+		}
+	}
+}
+
+.equal-heights {
+	align-items: normal !important;
+	> * {
+		display: flex;
+	}
+}
+
+// .wp-block-buttons>.wp-block-button {
+// 	display: inline-block;
+// 	width: 100%;
+// 	margin: 0;
+// }
 
 .wp-block-columns {
 	gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
@@ -42,4 +71,8 @@ blockquote {
 
 .wp-block-column {
 	word-break: normal;
+}
+
+.wp-block-buttons.is-vertical {
+	gap: clamp(3.106rem, 2.783rem + 1.379vw, 4.438rem);
 }

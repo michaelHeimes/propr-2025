@@ -1,0 +1,18 @@
+.single-post {
+	.post-navigation {
+		gap: .55em;
+		.break {
+			
+		}
+	}
+	h1.entry-title {
+		padding-top: 1em;
+		font-weight: 700;
+	}
+	.entry-footer {
+		margin-top: clamp(2.45rem, 2.195rem + 1.087vw, 3.5rem);
+		h2 {
+			margin-bottom: clamp(2.975rem, 2.666rem + 1.32vw, 4.25rem);
+		}
+	}
+}

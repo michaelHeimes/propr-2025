@@ -18,7 +18,7 @@ function trailhead_start() {
     add_filter('gallery_style', 'trailhead_gallery_style');
 
     // cleaning up excerpt
-    add_filter('excerpt_more', 'trailhead_excerpt_more');
+    // add_filter('excerpt_more', 'trailhead_excerpt_more');
 
 } /* end joints start */
 

@@ -1,0 +1,13 @@
+.page-template-custom-page-client-stories {
+	.stories-list {
+		hr {
+			margin-top: 0;
+			margin-bottom: rem-calc(32);
+		}
+		article {
+			svg {
+				transform: translateY(1em);
+			}
+		}
+	}
+}

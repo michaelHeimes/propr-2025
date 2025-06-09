@@ -1,6 +1,8 @@
 // Global setup (must be top-level)
 @import "variables";
 @import "foundation-settings";
+$smallGutter: map-get($grid-margin-gutters, "small");
+$mediumGutter: map-get($grid-margin-gutters, "medium");
 @import "mixins";
 
 // Pull in only what’s needed
@@ -9,14 +11,43 @@
 @import "blocks";
 
 // Editor-specific styles wrapped in the Gutenberg scope
-.editor-visual-editor {
+.wp-block[data-type="core/widget-area"],
+.blocks-widgets-container .editor-styles-wrapper {
+	max-width: 1920px !important;
+}
+.editor-visual-editor,
+.block-editor-block-list__block {
 	:where(.wp-block) {
 		max-width: 1920px !important;
 	}
 	
 	@import "typography";	
+	
+	p,
+	ul,
+	ol,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "embarcadero-mvb-pro-condense", sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		color: inherit;
+		text-rendering: optimizeLegibility;
+	}
 
 	// Add other block-specific tweaks as needed
+	.block-editor-block-list__layout .block-editor-block-list__block {
+		z-index: 0;
+	}
+	.acf-block-body .acf-link a.button {
+		font-size: initial;
+		letter-spacing: initial;
+		line-height: 26px;
+	}
 	.wp-element-button,
 	.wp-block-button__link {
 		
@@ -48,13 +79,24 @@
 		&:before {
 			content: '';
 			display: block;
-			border: 10px solid $black;
+			border: 10px solid #000;
 			position: absolute;
 			z-index: -1;
 			width: 100%;
 			height: 100%;
 			top: 8px;
 			left: 10px;
+		}
+	}
+	.wp-block-pullquote {
+		&:not(.no-top-spacing) {
+			margin-top: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
+		}
+		&:not(.no-bottom-spacing) {
+			margin-bottom: clamp(5.381rem, 4.821rem + 2.389vw, 7.688rem);
+		}
+		cite {
+			font-size: .9em;
 		}
 	}
 }

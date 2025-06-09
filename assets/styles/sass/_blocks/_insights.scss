@@ -1,10 +1,7 @@
-.insights.custom-block {
+.insights.custom-block,
+.posts-title-list {
 	article {
 		a {
-			position: relative;
-			column-gap: $smallGutter;
-			padding-top: 16px;
-			padding-bottom: 22px;
 			.title {
 				text-decoration: underline;
 				text-decoration-thickness: 1px;
@@ -18,24 +15,16 @@
 					text-decoration-color: $black;
 				}
 			}
-			hr {
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				margin: 0;
-				border-bottom:clamp(0.219rem, 0.196rem + 0.097vw, 0.313rem) solid $black;
-				&.top {
-					bottom: auto;
-					top: 0;
-				}
-			}
-			.cell {
-				padding:  calc($smallGutter * .5) 0; 
-			}
-			@include breakpoint(medium) {
-				column-gap: $mediumGutter;
+			.grid-x {
+				padding-top: rem-calc(16);
+				padding-bottom: rem-calc(17);
 				.cell {
-					padding:  calc($mediumGutter * .5) 0; 
+					padding: calc($smallGutter * .5) 0; 
+				}
+				gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);				@include breakpoint(medium) {
+					.cell {
+						padding: calc($mediumGutter * .5) 0; 
+					}
 				}
 			}
 		}

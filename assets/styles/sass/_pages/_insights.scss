@@ -1,0 +1,54 @@
+.page-template-custom-page-insights {
+	.filter {
+		padding-top: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
+		padding-bottom: clamp(5.556rem, 4.978rem + 2.466vw, 7.938rem);
+	}
+	.alm-filter-nav {
+		> .cell {
+			margin-left: 5%;
+		}
+		button {
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 0.12em;
+		}
+	}
+	.ajax-load-more-wrap {
+		.grid-x.inner {
+			padding-top: rem-calc(28);
+			padding-bottom: rem-calc(46);
+			gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
+			row-gap: 8px;
+		}
+		.tags {
+			padding-top: clamp(2.756rem, 2.47rem + 1.223vw, 3.938rem);
+			column-gap: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
+			row-gap: 8px;
+		}
+		article {
+			hr {
+				margin: 0;
+			}
+			.title {
+				padding-left: 3.75%;
+			}
+			.excerpt-tags {
+				padding-left: 10.625%;
+			}
+			svg {
+				transform: translateY(23px);
+			}
+		}
+	}
+	.alm-btn-wrap {
+		padding: 0;
+		margin: clamp(3.15rem, 2.822rem + 1.398vw, 4.5rem) auto 0;
+		text-align: left;
+		width: 80%;
+		max-width: 620px;
+		button {
+			padding-top: clamp(1.137rem, 1.019rem + 0.505vw, 1.625rem);
+			padding-bottom: clamp(1.137rem, 1.019rem + 0.505vw, 1.625rem);
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.page-template-custom-page-book {
+
+	#content {
+		padding-bottom: 9.95rem;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.book-img {
+		max-width: 343px;
+		margin-bottom: 2.55rem;
+
+		&.mobile-img {
+			padding-bottom: 2.35rem;
+		}
+
+	}
+
+	.link-wrap {
+		padding-bottom: 2.95rem;
+	}
+
+	.book-quote {
+		font-style: italic;
+		padding-bottom: 1.9rem;
+
+		p.author {
+			padding-top: 1.85rem;
+		}
+
+	}
+
+	.details-wrap {
+
+	}
+
+	.details {
+		h4 {
+			margin-top: 1.95em;
+		}
+		p {
+			font-size: clamp(0.844rem, 0.751rem + 0.541vw, 1.4rem);
+		}
+	}
+
+	.library-of-congress {
+		padding-top: 2.92rem;
+		padding-bottom: 2.33rem;
+		font-size: rem-calc(20);
+		letter-spacing: .0005em;
+		line-height: 1.5;
+	}
+
+}

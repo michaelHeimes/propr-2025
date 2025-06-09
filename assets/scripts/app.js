@@ -160,6 +160,11 @@
     }
     
     _app.insights_filter = function() {
+        // Get all filter buttons.
+        const filter_buttons = document.querySelectorAll('.alm-filter-nav button');
+        
+        if(filter_buttons.length < 1) return;
+        
         /**
          * Filter button click event.
          */
@@ -190,8 +195,6 @@
             ajaxloadmore.filter(transition, speed, data);
         }
         
-        // Get all filter buttons.
-        var filter_buttons = document.querySelectorAll('.alm-filter-nav button');
         if (filter_buttons) {
             // Set initial active item.
             filter_buttons[0].classList.add('active');

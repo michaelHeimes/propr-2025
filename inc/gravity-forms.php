@@ -30,5 +30,5 @@ function input_to_button( $button, $form ) {
 		}
 	}
  
-	return sprintf( '<button %s><span class="show-for-sr">%s</span></button>', implode( ' ', $new_attributes ), esc_html( $fragment->get_attribute( 'value' ) ) );
+	return sprintf( '<button %s><span>%s</span></button>', implode( ' ', $new_attributes ), esc_html( $fragment->get_attribute( 'value' ) ) );
 }

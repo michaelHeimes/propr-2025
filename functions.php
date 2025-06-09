@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 /**
@@ -126,8 +126,20 @@ add_action( 'after_setup_theme', 'trailhead_content_width', 0 );
 function trailhead_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'trailhead' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Insights Sidebar', 'trailhead' ),
+			'id'            => 'insights-sidebar',
+			'description'   => esc_html__( 'Add widgets here.', 'trailhead' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Post Footer Widgets', 'trailhead' ),
+			'id'            => 'post-footer',
 			'description'   => esc_html__( 'Add widgets here.', 'trailhead' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

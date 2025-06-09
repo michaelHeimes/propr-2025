@@ -10,7 +10,9 @@ ol,
 button,
 .button,
 .wp-element-button,
-.wp-block-button__link {
+.wp-block-button__link,
+body .gform-theme.gform-theme--framework.gform_wrapper .button:where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)),
+body .gform-theme.gform-theme--framework.gform_wrapper :where(:not(.mce-splitbtn))>button:not([id*=mceu_]):not(.mce-open):where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)), .gform-theme.gform-theme--framework.gform_wrapper button.button:where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)) {
 	line-height: 1.4;
 	font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
 	@include letter-spacing(-15);

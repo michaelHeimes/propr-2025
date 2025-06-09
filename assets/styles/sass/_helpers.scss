@@ -6,7 +6,7 @@
 	&.wp-block-column,
 	&.block-core-columns,
 	&.padded {
-		padding: 30px;
+		padding: clamp(1.313rem, 1.176rem + 0.583vw, 1.875rem);
 	}
 }
 .black-drop-shadow {
@@ -23,6 +23,15 @@
 }
 .pe-40 {
 	padding-right: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
+}
+.m-0 {
+	margin: 0;
+}
+.row-gap-0 {
+	row-gap: 0 !important;	
+	ul.wp-block-list {
+		margin-bottom: 0;
+	}
 }
 .no-bullet {
 	list-style: none;

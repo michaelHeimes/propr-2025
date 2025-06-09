@@ -66,7 +66,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1920);
+$global-width: rem-calc(1880);
 $global-lineheight: 1.5;
 $foundation-palette: (
   "primary": #1779ba,
@@ -110,7 +110,7 @@ $-zf-size: null;
 $breakpoints: (
   "small": 0,
   "medium": 781px,
-  "tablet": 900px,
+  "tablet": 992px,
   "large": 1024px,
   "xlarge": 1200px,
   "xxlarge": 1440px,

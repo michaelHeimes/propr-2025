@@ -1,0 +1,24 @@
+.single-client-story {
+	.entry-footer {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		.cta {
+			hr {
+				margin-top: clamp(3.369rem, 3.018rem + 1.495vw, 4.813rem);
+				margin-bottom: rem-calc(23);
+			}
+			p {
+				@extend .has-large-font-size;
+				a {
+					text-decoration: underline;
+					text-decoration-thickness: 1px;
+					text-underline-offset: 0.12em;
+					&:hover {
+						text-underline-offset: 0.06em;
+					}
+				}
+			}
+		}
+	}
+}
