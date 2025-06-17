@@ -56,6 +56,28 @@ footer#colophon {
 		@include breakpoint(medium) {
 			margin-bottom: $mediumGutter;
 		}
+		.grid-x {
+			@include breakpoint(medium down) {
+				justify-content: center;
+				li,
+				.copyright {
+					display: block;
+					width: 100%;
+					text-align: center;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+		a {
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 0.12em;
+			&:hover,
+			&:focus {
+				color: $black;
+				text-underline-offset: 0em;
+			}
+		}
 	}
 	
 }

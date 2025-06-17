@@ -111,6 +111,7 @@ button:not(.no-style),
 		height: calc(100% + clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem));
 		top: clamp(0.35rem, 0.314rem + 0.155vw, 0.5rem);
 		left: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem);
+		transition: 0s linear;
 	}
 	span {
 		display: inline-block;
@@ -131,6 +132,7 @@ button:not(.no-style),
 			  transparent 1px,
 			  transparent 4px
 			);
+			transform: translate(4px, 4px);
 		}
 	}
 	&.loading:before {
@@ -185,6 +187,10 @@ POSTS & CONTENT STYLES
 		text-decoration: underline;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.12em;
+		&:hover,
+		&:focus {
+			text-underline-offset: 0;
+		}
 	}
 	img {
 		max-width: 100%;

@@ -6357,6 +6357,8 @@ button:not(.no-style):after,
   height: calc(100% + clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem));
   top: clamp(0.35rem, 0.314rem + 0.155vw, 0.5rem);
   left: clamp(0.438rem, 0.393rem + 0.194vw, 0.625rem);
+  -webkit-transition: 0s linear;
+  transition: 0s linear;
 }
 body .gform-theme.gform-theme--framework.gform_wrapper .button:where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)) span,
 body .gform-theme.gform-theme--framework.gform_wrapper :where(:not(.mce-splitbtn)) > button:not([id*=mceu_]):not(.mce-open):where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)) span, .gform-theme.gform-theme--framework.gform_wrapper button.button:where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)) span,
@@ -6419,6 +6421,8 @@ button:not(.no-style):focus:after,
 .wp-block-button__link:hover:after,
 .wp-block-button__link:focus:after {
   background: repeating-linear-gradient(-45deg, black, black 1px, transparent 1px, transparent 4px);
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
 }
 body .gform-theme.gform-theme--framework.gform_wrapper .button:where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)).loading:before,
 body .gform-theme.gform-theme--framework.gform_wrapper :where(:not(.mce-splitbtn)) > button:not([id*=mceu_]):not(.mce-open):where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)).loading:before, .gform-theme.gform-theme--framework.gform_wrapper button.button:where(:not(.gform-theme-no-framework):not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)).loading:before,
@@ -6471,6 +6475,9 @@ POSTS & CONTENT STYLES
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.12em;
+}
+.entry-content p a:hover, .entry-content p a:focus {
+  text-underline-offset: 0;
 }
 .entry-content img {
   max-width: 100%;
@@ -7360,6 +7367,30 @@ footer#colophon .subfooter {
     margin-bottom: 40px;
   }
 }
+@media print, screen and (max-width: 61.99875em) {
+  footer#colophon .subfooter .grid-x, footer#colophon .subfooter ul#footer-links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer#colophon .subfooter .grid-x li, footer#colophon .subfooter ul#footer-links li,
+  footer#colophon .subfooter .grid-x .copyright,
+  footer#colophon .subfooter ul#footer-links .copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+footer#colophon .subfooter a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+footer#colophon .subfooter a:hover, footer#colophon .subfooter a:focus {
+  color: #000;
+  text-underline-offset: 0em;
+}
 
 .wp-block-columns:not(.no-top-spacing),
 .wp-block-group:not(.no-top-spacing),
@@ -7518,9 +7549,14 @@ body .gform-theme--foundation#gform_wrapper_2 .gform-footer.gform_footer {
 body .gform-theme--foundation#gform_wrapper_2 .gform_button.button, body .gform-theme--foundation#gform_wrapper_2 .gform_button.wp-element-button,
 body .gform-theme--foundation#gform_wrapper_2 .gform_button.wp-block-button__link {
   z-index: 2;
-  width: 50% !important;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+}
+@media screen and (min-width: 640px) {
+  body .gform-theme--foundation#gform_wrapper_2 .gform_button.button, body .gform-theme--foundation#gform_wrapper_2 .gform_button.wp-element-button,
+  body .gform-theme--foundation#gform_wrapper_2 .gform_button.wp-block-button__link {
+    width: 50% !important;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
 }
 body .has-inline-form .gform-theme--foundation .gform_fields {
   display: block;
@@ -7553,13 +7589,17 @@ body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_b
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="39.137" height="33.079" viewBox="0 0 39.137 33.079"><path data-name="Path 12" d="m13.25 0 13.232 13.232H0v6.616h26.482L13.25 33.079h9.35l16.54-16.54L22.6 0Z"/></svg>');
+  background: #fff url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="39.137" height="33.079" viewBox="0 0 39.137 33.079"><path data-name="Path 12" d="m13.25 0 13.232 13.232H0v6.616h26.482L13.25 33.079h9.35l16.54-16.54L22.6 0Z"/></svg>');
   background-repeat: no-repeat;
   background-size: clamp(1.706rem, 1.529rem + 0.757vw, 2.438rem);
   background-position: center;
   width: clamp(4.375rem, 3.92rem + 1.942vw, 6.25rem) !important;
   padding: 1rem;
   position: relative;
+}
+body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.button:before, body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-element-button:before,
+body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-block-button__link:before {
+  display: none;
 }
 body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.button:after, body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-element-button:after,
 body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-block-button__link:after {
@@ -7584,6 +7624,8 @@ body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_b
 body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-block-button__link:hover:after, body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.button:focus:after, body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-element-button:focus:after,
 body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_button.wp-block-button__link:focus:after {
   background: repeating-linear-gradient(-45deg, black, black 1px, transparent 1px, transparent 4px);
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .insights.custom-block article a .title,
@@ -7602,6 +7644,12 @@ body .has-inline-form .gform-theme--foundation form .gform_footer button.gform_b
 .posts-title-list article a:hover .title,
 .posts-title-list article a:focus .title {
   text-decoration-color: #000;
+}
+.insights.custom-block article a:hover svg, .insights.custom-block article a:focus svg,
+.posts-title-list article a:hover svg,
+.posts-title-list article a:focus svg {
+  -webkit-animation: wiggle-left-right 0.5s ease infinite;
+          animation: wiggle-left-right 0.5s ease infinite;
 }
 .insights.custom-block article a .grid-x, .insights.custom-block article a footer#colophon ul#footer-links, footer#colophon .insights.custom-block article a ul#footer-links,
 .posts-title-list article a .grid-x,
@@ -7632,16 +7680,64 @@ footer#colophon .posts-title-list article a ul#footer-links li {
   }
 }
 
+@-webkit-keyframes wiggle-left-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes wiggle-left-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .right-arrow-cta.custom-block h2 {
   margin: 0;
 }
 
 .page-template-custom-page-insights .filter {
   padding-top: clamp(1.75rem, 1.568rem + 0.777vw, 2.5rem);
-  padding-bottom: clamp(5.556rem, 4.978rem + 2.466vw, 7.938rem);
+  padding-bottom: clamp(4.5rem, 3.893rem + 2.589vw, 7rem);
+}
+.page-template-custom-page-insights .filter body .gform-theme--foundation .gfield input:not([type=radio]):not([type=checkbox])::-webkit-input-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter input:not([type=radio]):not([type=checkbox])::-webkit-input-placeholder, .page-template-custom-page-insights .filter body .gform-theme--foundation .gfield textarea::-webkit-input-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter textarea::-webkit-input-placeholder {
+  margin-bottom: 1rem;
+}
+.page-template-custom-page-insights .filter body .gform-theme--foundation .gfield input:not([type=radio]):not([type=checkbox])::-moz-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter input:not([type=radio]):not([type=checkbox])::-moz-placeholder, .page-template-custom-page-insights .filter body .gform-theme--foundation .gfield textarea::-moz-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter textarea::-moz-placeholder {
+  margin-bottom: 1rem;
+}
+.page-template-custom-page-insights .filter body .gform-theme--foundation .gfield input:not([type=radio]):not([type=checkbox]):-ms-input-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter input:not([type=radio]):not([type=checkbox]):-ms-input-placeholder, .page-template-custom-page-insights .filter body .gform-theme--foundation .gfield textarea:-ms-input-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter textarea:-ms-input-placeholder {
+  margin-bottom: 1rem;
+}
+.page-template-custom-page-insights .filter body .gform-theme--foundation .gfield input:not([type=radio]):not([type=checkbox])::-ms-input-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter input:not([type=radio]):not([type=checkbox])::-ms-input-placeholder, .page-template-custom-page-insights .filter body .gform-theme--foundation .gfield textarea::-ms-input-placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter textarea::-ms-input-placeholder {
+  margin-bottom: 1rem;
+}
+.page-template-custom-page-insights .filter .p, .page-template-custom-page-insights .filter header.site-header #top-bar-menu #main-nav > li > a, header.site-header #top-bar-menu .page-template-custom-page-insights .filter #main-nav > li > a, .page-template-custom-page-insights .filter ul#offcanvas-nav li a, ul#offcanvas-nav li .page-template-custom-page-insights .filter a, .page-template-custom-page-insights .filter footer#colophon ul#footer-links li a, footer#colophon ul#footer-links li .page-template-custom-page-insights .filter a, .page-template-custom-page-insights .filter body .gform-theme--foundation .gfield input:not([type=radio]):not([type=checkbox]), body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter input:not([type=radio]):not([type=checkbox]),
+.page-template-custom-page-insights .filter body .gform-theme--foundation .gfield textarea,
+body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter textarea, .page-template-custom-page-insights .filter body .gform-theme--foundation .gfield input:not([type=radio]):not([type=checkbox])::placeholder, body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter input:not([type=radio]):not([type=checkbox])::placeholder,
+.page-template-custom-page-insights .filter body .gform-theme--foundation .gfield textarea::placeholder,
+body .gform-theme--foundation .gfield .page-template-custom-page-insights .filter textarea::placeholder {
+  margin-bottom: 1rem;
 }
 .page-template-custom-page-insights .alm-filter-nav > .cell, .page-template-custom-page-insights footer#colophon ul#footer-links .alm-filter-nav > li, footer#colophon ul#footer-links .page-template-custom-page-insights .alm-filter-nav > li {
-  margin-left: 5%;
+  margin-bottom: 15px;
 }
 .page-template-custom-page-insights .alm-filter-nav button {
   text-decoration: underline;

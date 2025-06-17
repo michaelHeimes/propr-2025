@@ -78,8 +78,10 @@ body {
 			}
 			.gform_button.button {
 				z-index: 2;
-				width: 50% !important;
-				transform: translateY(-100%);
+				@media screen and (min-width: 640px) {
+					width: 50% !important;
+					transform: translateY(-100%);	
+				}
 			}
 		}
 	}
@@ -109,13 +111,16 @@ body {
 						box-shadow: none;
 						@extend .bordered;
 						border-radius: 0;
-						background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="39.137" height="33.079" viewBox="0 0 39.137 33.079"><path data-name="Path 12" d="m13.25 0 13.232 13.232H0v6.616h26.482L13.25 33.079h9.35l16.54-16.54L22.6 0Z"/></svg>');
+						background: $white url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="39.137" height="33.079" viewBox="0 0 39.137 33.079"><path data-name="Path 12" d="m13.25 0 13.232 13.232H0v6.616h26.482L13.25 33.079h9.35l16.54-16.54L22.6 0Z"/></svg>');
 						background-repeat: no-repeat;
 						background-size: clamp(1.706rem, 1.529rem + 0.757vw, 2.438rem);
 						background-position: center; 
 						width: clamp(4.375rem, 3.92rem + 1.942vw, 6.25rem) !important;
 						padding: 1rem;
 						position: relative;
+						&:before {
+							display: none;
+						}
 						&:after {
 							content: '';
 							display: block;
@@ -140,6 +145,7 @@ body {
 								  transparent 1px,
 								  transparent 4px
 								);
+								transform: translate(0px, 0px);
 							}
 						}
 					}

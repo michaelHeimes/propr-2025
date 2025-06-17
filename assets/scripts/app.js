@@ -206,6 +206,19 @@
             });
         }
     }
+    
+    _app.moreLinksExpand = function() {
+        const more_links = document.querySelectorAll('a[href="#more"]');
+        more_links .forEach(link => {
+            const hiddenContent = link.closest('.wp-block-group').querySelector('.more-content');
+            $(hiddenContent).slideUp(0);
+            link.addEventListener('click', function(event){
+                event.preventDefault();
+                link.style.display = 'none';
+                $(hiddenContent).slideDown(400);
+            });
+        });
+    }
             
     _app.init = function() {
         
@@ -219,6 +232,7 @@
         //_app.mobile_takover_nav();
         _app.link_pointer();
         _app.insights_filter();
+        _app.moreLinksExpand();
     }
     
     

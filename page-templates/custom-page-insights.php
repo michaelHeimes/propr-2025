@@ -33,22 +33,24 @@ $categories = get_categories([
 									<?php if ( ! empty( $categories ) && ! is_wp_error( $categories ) ):?>
 										<hr class="m-0">
 										<div class="filter grid-x grid-padding-x">
-											<div class="cell shrink">
+											<div class="cell small-12">
 												<div class="p"><b>Categories:</b></div>
 											</div>
-											<div class="alm-filter-nav cell auto grid-x grid-padding-x align-right">
-												<div class="cell shrink">
-													<button class="no-style" data-post-type="post" data-posts-per-page="6" data-category="" data-scroll="false" data-button-label="See More">
-														All
-													</button>
-												</div>
-												<?php foreach ( $categories as $term ):?>
+											<div class="cell small-12">
+												<div class="alm-filter-nav cell auto grid-x grid-padding-x">
 													<div class="cell shrink">
-														<button class="no-style" data-post-type="post" data-posts-per-page="6" data-category="<?=esc_attr($term->slug);?>" data-scroll="false" data-button-label="See More <?=esc_html( $term->name );?>">
-															<?=esc_html( $term->name );?>
+														<button class="no-style" data-post-type="post" data-posts-per-page="6" data-category="" data-scroll="false" data-button-label="See More">
+															All
 														</button>
 													</div>
-												<?php endforeach;?>										
+													<?php foreach ( $categories as $term ):?>
+														<div class="cell shrink">
+															<button class="no-style" data-post-type="post" data-posts-per-page="6" data-category="<?=esc_attr($term->slug);?>" data-scroll="false" data-button-label="See More <?=esc_html( $term->name );?>">
+																<?=esc_html( $term->name );?>
+															</button>
+														</div>
+													<?php endforeach;?>										
+												</div>
 											</div>
 										</div>
 									<?php endif;?>
