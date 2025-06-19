@@ -7760,6 +7760,18 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
 .page-template-custom-page-insights .ajax-load-more-wrap article hr {
   margin: 0;
 }
+.page-template-custom-page-insights .ajax-load-more-wrap article a:hover, .page-template-custom-page-insights .ajax-load-more-wrap article a:focus {
+  color: #000;
+}
+.page-template-custom-page-insights .ajax-load-more-wrap article a:hover .title, .page-template-custom-page-insights .ajax-load-more-wrap article a:focus .title {
+  text-decoration-color: #000;
+}
+.page-template-custom-page-insights .ajax-load-more-wrap article a:hover svg, .page-template-custom-page-insights .ajax-load-more-wrap article a:focus svg {
+  -webkit-transform: translateY(23px) translateX(0);
+          transform: translateY(23px) translateX(0);
+  -webkit-animation: wiggle-left-right 0.5s ease infinite;
+          animation: wiggle-left-right 0.5s ease infinite;
+}
 .page-template-custom-page-insights .ajax-load-more-wrap article .title {
   padding-left: 3.75%;
 }
@@ -7767,8 +7779,8 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
   padding-left: 10.625%;
 }
 .page-template-custom-page-insights .ajax-load-more-wrap article svg {
-  -webkit-transform: translateY(23px);
-          transform: translateY(23px);
+  -webkit-transform: translateY(16px) translateX(0);
+          transform: translateY(16px) translateX(0);
 }
 .page-template-custom-page-insights .alm-btn-wrap {
   padding: 0;
@@ -7782,6 +7794,20 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
   padding-bottom: clamp(1.137rem, 1.019rem + 0.505vw, 1.625rem);
 }
 
+@keyframes wiggle-left-right {
+  0% {
+    -webkit-transform: translateY(16px) translateX(0);
+            transform: translateY(16px) translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(16px) translateX(-16px);
+            transform: translateY(16px) translateX(-16px);
+  }
+  100% {
+    -webkit-transform: translateY(16px) translateX(0);
+            transform: translateY(16px) translateX(0);
+  }
+}
 .page-template-custom-page-client-stories .stories-list hr {
   margin-top: 0;
   margin-bottom: 2rem;

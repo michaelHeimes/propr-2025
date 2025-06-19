@@ -32,6 +32,19 @@
 			hr {
 				margin: 0;
 			}
+			a {
+				&:hover,
+				&:focus {
+					color: $black;
+					.title {
+						text-decoration-color: $black;
+					}
+					svg {
+						transform: translateY(23px) translateX(0);
+						animation: wiggle-left-right .5s ease infinite;
+					}
+				}
+			}
 			.title {
 				padding-left: 3.75%;
 			}
@@ -39,7 +52,7 @@
 				padding-left: 10.625%;
 			}
 			svg {
-				transform: translateY(23px);
+				transform: translateY(16px) translateX(0);
 			}
 		}
 	}
@@ -54,4 +67,15 @@
 			padding-bottom: clamp(1.137rem, 1.019rem + 0.505vw, 1.625rem);
 		}
 	}
+}
+@keyframes wiggle-left-right {
+  0% {
+	transform: translateY(16px) translateX(0);
+  }
+  50% {
+	transform: translateY(16px) translateX(-16px);
+  }
+  100% {
+	transform: translateY(16px) translateX(0);
+  }
 }
