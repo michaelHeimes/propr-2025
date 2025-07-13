@@ -46,6 +46,10 @@ body {
 					width: clamp(2.45rem, 2.195rem + 1.087vw, 3.5rem);
 				}
 			}
+			textarea {
+				padding-top: .45em;
+				padding-bottom: .45em;
+			}
 			&.gfield--type-radio {
 				.gfield_radio .gchoice {
 					margin: 0;

@@ -136,7 +136,7 @@ ul#offcanvas-nav {
 	right: 0;
 	width: 90vw;
 	max-width: 500px;
-	height: calc(100vh - 171px);
+	height: calc(100vh - 148px);
 	background: $white;
 	padding: 2rem 3rem 4rem;
 	overflow: auto;
@@ -183,11 +183,17 @@ ul#offcanvas-nav {
 	background-color: $black;
 	overflow: hidden;
 	header.site-header {
-		filter: invert(1);	
+		filter: invert(1);
+		@include breakpoint(small down) {
+			background-color: $white;
+		}
 	}
 	.off-canvas-wrapper {
 		&:before {
 			display: block;
+			@include breakpoint(small down) {
+				background-color: $white;
+			}
 		}
 	}
 	ul#offcanvas-nav {

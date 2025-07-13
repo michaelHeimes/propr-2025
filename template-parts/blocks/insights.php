@@ -62,7 +62,7 @@ if($source == 'selected') {
                                     </div>
                                 <?php endif;?>
                                 <div class="grid-x align-middle">
-                                    <div class="cell small-3">
+                                    <div class="cell small-2">
                                         <b>POST:</b>
                                     </div>
                                     <div class="cell auto weight-medium title">

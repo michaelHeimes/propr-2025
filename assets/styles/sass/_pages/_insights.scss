@@ -41,7 +41,7 @@
 					}
 					svg {
 						transform: translateY(23px) translateX(0);
-						animation: wiggle-left-right .5s ease infinite;
+						animation: insights-pagewiggle-left-right .5s ease infinite;
 					}
 				}
 			}
@@ -68,7 +68,7 @@
 		}
 	}
 }
-@keyframes wiggle-left-right {
+@keyframes insights-pagewiggle-left-right {
   0% {
 	transform: translateY(16px) translateX(0);
   }

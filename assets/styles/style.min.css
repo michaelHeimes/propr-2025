@@ -7259,7 +7259,7 @@ ul#offcanvas-nav {
   right: 0;
   width: 90vw;
   max-width: 500px;
-  height: calc(100vh - 171px);
+  height: calc(100vh - 148px);
   background: #fff;
   padding: 2rem 3rem 4rem;
   overflow: auto;
@@ -7303,8 +7303,18 @@ ul#offcanvas-nav li a:hover, ul#offcanvas-nav li a:focus {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
+@media print, screen and (max-width: 48.81125em) {
+  .mobile-nav-opened header.site-header {
+    background-color: #fff;
+  }
+}
 .mobile-nav-opened .off-canvas-wrapper:before {
   display: block;
+}
+@media print, screen and (max-width: 48.81125em) {
+  .mobile-nav-opened .off-canvas-wrapper:before {
+    background-color: #fff;
+  }
 }
 .mobile-nav-opened ul#offcanvas-nav {
   display: block;
@@ -7512,6 +7522,10 @@ body .gform-theme--foundation .gfield input[type=radio], body .gform-theme--foun
   border-radius: 100%;
   height: clamp(2.45rem, 2.195rem + 1.087vw, 3.5rem);
   width: clamp(2.45rem, 2.195rem + 1.087vw, 3.5rem);
+}
+body .gform-theme--foundation .gfield textarea {
+  padding-top: 0.45em;
+  padding-bottom: 0.45em;
 }
 body .gform-theme--foundation .gfield.gfield--type-radio .gfield_radio .gchoice {
   margin: 0;
@@ -7769,8 +7783,8 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
 .page-template-custom-page-insights .ajax-load-more-wrap article a:hover svg, .page-template-custom-page-insights .ajax-load-more-wrap article a:focus svg {
   -webkit-transform: translateY(23px) translateX(0);
           transform: translateY(23px) translateX(0);
-  -webkit-animation: wiggle-left-right 0.5s ease infinite;
-          animation: wiggle-left-right 0.5s ease infinite;
+  -webkit-animation: insights-pagewiggle-left-right 0.5s ease infinite;
+          animation: insights-pagewiggle-left-right 0.5s ease infinite;
 }
 .page-template-custom-page-insights .ajax-load-more-wrap article .title {
   padding-left: 3.75%;
@@ -7794,7 +7808,22 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
   padding-bottom: clamp(1.137rem, 1.019rem + 0.505vw, 1.625rem);
 }
 
-@keyframes wiggle-left-right {
+@-webkit-keyframes insights-pagewiggle-left-right {
+  0% {
+    -webkit-transform: translateY(16px) translateX(0);
+            transform: translateY(16px) translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(16px) translateX(-16px);
+            transform: translateY(16px) translateX(-16px);
+  }
+  100% {
+    -webkit-transform: translateY(16px) translateX(0);
+            transform: translateY(16px) translateX(0);
+  }
+}
+
+@keyframes insights-pagewiggle-left-right {
   0% {
     -webkit-transform: translateY(16px) translateX(0);
             transform: translateY(16px) translateX(0);
@@ -7885,5 +7914,58 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
   font-size: 1.25rem;
   letter-spacing: 0.0005em;
   line-height: 1.5;
+}
+
+.error404 #skull-404 {
+  margin-bottom: clamp(2.231rem, 1.999rem + 0.99vw, 3.188rem);
+}
+.error404 #skull-404 .eye-block {
+  -webkit-animation: eyeFlash 2s infinite;
+          animation: eyeFlash 2s infinite;
+}
+.error404 #graphic-404 {
+  margin-bottom: clamp(1.4rem, 1.254rem + 0.621vw, 2rem);
+}
+.error404 #page-not-found-text {
+  margin-bottom: clamp(1.925rem, 1.725rem + 0.854vw, 2.75rem);
+}
+.error404 .link-wrap {
+  margin-bottom: clamp(4.463rem, 3.998rem + 1.981vw, 6.375rem);
+}
+
+@-webkit-keyframes eyeFlash {
+  0%, 10% {
+    fill: #000;
+  }
+  12%, 14% {
+    fill: #89ff00;
+  }
+  16%, 20% {
+    fill: #000;
+  }
+  22%, 24% {
+    fill: #89ff00;
+  }
+  26%, 100% {
+    fill: #000;
+  }
+}
+
+@keyframes eyeFlash {
+  0%, 10% {
+    fill: #000;
+  }
+  12%, 14% {
+    fill: #89ff00;
+  }
+  16%, 20% {
+    fill: #000;
+  }
+  22%, 24% {
+    fill: #89ff00;
+  }
+  26%, 100% {
+    fill: #000;
+  }
 }
 /*# sourceMappingURL=style.min.css.map */

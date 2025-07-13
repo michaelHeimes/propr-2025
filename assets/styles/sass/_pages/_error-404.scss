@@ -1,0 +1,36 @@
+.error404 {
+	#skull-404 {
+		margin-bottom: clamp(2.231rem, 1.999rem + 0.99vw, 3.188rem);
+		.eye-block {
+			animation: eyeFlash 2s infinite;
+	
+		}
+	}
+	#graphic-404 {
+		margin-bottom: clamp(1.4rem, 1.254rem + 0.621vw, 2rem);
+	}
+	#page-not-found-text {
+		margin-bottom: clamp(1.925rem, 1.725rem + 0.854vw, 2.75rem);
+	}
+	.link-wrap {
+		margin-bottom: clamp(4.463rem, 3.998rem + 1.981vw, 6.375rem);
+	}
+}
+
+@keyframes eyeFlash {
+ 	0%, 10% {
+	 	fill: #000;
+    }
+	12%, 14% {
+		fill: #89ff00;
+	}
+	16%, 20% {
+		fill: #000;
+	}
+	22%, 24% {
+		fill: #89ff00;
+	}
+	26%, 100% {
+		fill: #000;
+	}
+}
