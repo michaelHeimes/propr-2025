@@ -217,6 +217,50 @@
 .block-editor-block-list__block a {
   color: #000;
 }
+.editor-visual-editor h1.no-top-spacing,
+.editor-visual-editor .h1.no-top-spacing,
+.editor-visual-editor h2.no-top-spacing,
+.editor-visual-editor .h2.no-top-spacing,
+.editor-visual-editor h3.no-top-spacing,
+.editor-visual-editor .h3.no-top-spacing,
+.editor-visual-editor h4.no-top-spacing,
+.editor-visual-editor .h4.no-top-spacing,
+.editor-visual-editor h5.no-top-spacing,
+.editor-visual-editor .h5.no-top-spacing,
+.block-editor-block-list__block h1.no-top-spacing,
+.block-editor-block-list__block .h1.no-top-spacing,
+.block-editor-block-list__block h2.no-top-spacing,
+.block-editor-block-list__block .h2.no-top-spacing,
+.block-editor-block-list__block h3.no-top-spacing,
+.block-editor-block-list__block .h3.no-top-spacing,
+.block-editor-block-list__block h4.no-top-spacing,
+.block-editor-block-list__block .h4.no-top-spacing,
+.block-editor-block-list__block h5.no-top-spacing,
+.block-editor-block-list__block .h5.no-top-spacing {
+  margin-top: 0 !important;
+}
+.editor-visual-editor h1.no-bottom-spacing,
+.editor-visual-editor .h1.no-bottom-spacing,
+.editor-visual-editor h2.no-bottom-spacing,
+.editor-visual-editor .h2.no-bottom-spacing,
+.editor-visual-editor h3.no-bottom-spacing,
+.editor-visual-editor .h3.no-bottom-spacing,
+.editor-visual-editor h4.no-bottom-spacing,
+.editor-visual-editor .h4.no-bottom-spacing,
+.editor-visual-editor h5.no-bottom-spacing,
+.editor-visual-editor .h5.no-bottom-spacing,
+.block-editor-block-list__block h1.no-bottom-spacing,
+.block-editor-block-list__block .h1.no-bottom-spacing,
+.block-editor-block-list__block h2.no-bottom-spacing,
+.block-editor-block-list__block .h2.no-bottom-spacing,
+.block-editor-block-list__block h3.no-bottom-spacing,
+.block-editor-block-list__block .h3.no-bottom-spacing,
+.block-editor-block-list__block h4.no-bottom-spacing,
+.block-editor-block-list__block .h4.no-bottom-spacing,
+.block-editor-block-list__block h5.no-bottom-spacing,
+.block-editor-block-list__block .h5.no-bottom-spacing {
+  margin-bottom: 0 !important;
+}
 .editor-visual-editor h1,
 .editor-visual-editor .h1,
 .block-editor-block-list__block h1,

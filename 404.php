@@ -50,14 +50,9 @@ get_header();
 						<section class="entry-content">
 							<p class="show-for-sr">Page not found. <a href="<?php echo home_url(); ?>">Return to the home page.</a></p>
 						</section> <!-- end article section -->
-					
-					
+
 					</article> <!-- end article -->
-					
-					<div class="grid-container wp-block-group">
-						<?php dynamic_sidebar( 'post-footer' ); ?>
-					</div>
-			
+	
 				</main><!-- #main -->
 			</div>
 		</div>

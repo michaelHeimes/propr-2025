@@ -156,6 +156,3 @@ if( $source == 'picker' ) {
 		</div>
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
-<div class="grid-container wp-block-group">
-	<?php dynamic_sidebar( 'post-footer' ); ?>
-</div>

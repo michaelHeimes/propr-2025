@@ -7140,6 +7140,35 @@ a {
   color: #000;
 }
 
+h1.no-top-spacing,
+.h1.no-top-spacing,
+h2.no-top-spacing,
+.h2.no-top-spacing,
+body .gform-theme--foundation .gfield .gform-field-label span.no-top-spacing.gfield_required,
+body .gform-theme--foundation .gfield .no-top-spacing.gform-field-label,
+h3.no-top-spacing,
+.h3.no-top-spacing,
+h4.no-top-spacing,
+.h4.no-top-spacing,
+h5.no-top-spacing,
+.h5.no-top-spacing {
+  margin-top: 0 !important;
+}
+h1.no-bottom-spacing,
+.h1.no-bottom-spacing,
+h2.no-bottom-spacing,
+.h2.no-bottom-spacing,
+body .gform-theme--foundation .gfield .gform-field-label span.no-bottom-spacing.gfield_required,
+body .gform-theme--foundation .gfield .no-bottom-spacing.gform-field-label,
+h3.no-bottom-spacing,
+.h3.no-bottom-spacing,
+h4.no-bottom-spacing,
+.h4.no-bottom-spacing,
+h5.no-bottom-spacing,
+.h5.no-bottom-spacing {
+  margin-bottom: 0 !important;
+}
+
 h1,
 .h1 {
   font-size: clamp(2.625rem, 2.352rem + 1.165vw, 3.75rem);
@@ -7914,6 +7943,140 @@ body .gform-theme--foundation .gfield .page-template-custom-page-insights .filte
   font-size: 1.25rem;
   letter-spacing: 0.0005em;
   line-height: 1.5;
+}
+
+.hands-wrap {
+  text-align: center;
+  position: relative;
+}
+.hands-wrap:before {
+  content: "";
+  display: block;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: clamp(5.25rem, 4.704rem + 2.33vw, 7.5rem);
+  right: 100%;
+  width: 100vw;
+}
+.hands-wrap .inner {
+  padding-top: clamp(4.375rem, 3.92rem + 1.942vw, 6.25rem);
+  display: inline-block;
+  position: relative;
+  /* Peace hand scales up from 1 to 1.1 over 0.3s */
+  /* Thumbs up rotates 10deg after peace hand returns */
+  /* Rock roll moves up by -20px after thumbs up */
+}
+.hands-wrap .inner hr {
+  position: absolute;
+  right: 0;
+  width: 200vh;
+  bottom: 100%;
+  display: none;
+}
+.hands-wrap .inner svg {
+  overflow: visible;
+}
+.hands-wrap .inner svg g {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.hands-wrap .inner g.peace.hand {
+  -webkit-animation: scalePeace 2s infinite;
+          animation: scalePeace 2s infinite;
+}
+.hands-wrap .inner g.thumbs-up.hand {
+  -webkit-animation: rotateThumb 2s infinite;
+          animation: rotateThumb 2s infinite;
+}
+.hands-wrap .inner g.rock-roll.hand {
+  -webkit-animation: moveRock 2s infinite;
+          animation: moveRock 2s infinite;
+}
+@-webkit-keyframes scalePeace {
+  0%, 15% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  15%, 30% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  30%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scalePeace {
+  0%, 15% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  15%, 30% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  30%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes rotateThumb {
+  0%, 30% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  35%, 50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes rotateThumb {
+  0%, 30% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  35%, 50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@-webkit-keyframes moveRock {
+  0%, 45% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  55%, 70% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  70%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes moveRock {
+  0%, 45% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  55%, 70% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  70%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .error404 #skull-404 {

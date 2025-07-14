@@ -38,6 +38,24 @@ a {
 }
 
 h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+	&.no-top-spacing {
+		margin-top: 0 !important;
+	}
+	&.no-bottom-spacing {
+		margin-bottom: 0 !important;
+	}
+}
+
+h1,
 .h1 {
 	font-size: clamp(2.625rem, 2.352rem + 1.165vw, 3.75rem);
 	line-height: 1.2;

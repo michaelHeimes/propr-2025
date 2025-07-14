@@ -14,8 +14,14 @@ $address_text = get_field('footer_address_text', 'option') ?? null;
 $map_image = get_field('footer_map_image', 'option') ?? null;
 $subfooter_links = get_field('footer_subfooter_links', 'option') ?? null;
 $footer_social_links = get_field('footer_social_links', 'option') ?? null;
+$add_post_footer_widgets = get_field('add_post_footer_widgets') ?? null;
 $hide_footer_cta_button_link = get_field('hide_footer_cta_button_link');
 ?>
+<?php if( is_singular('post') || $add_post_footer_widgets || is_404() ):?>
+<div class="grid-container wp-block-group">
+	<?php dynamic_sidebar( 'post-footer' ); ?>
+</div>
+<?php endif;?>
 
 				<footer id="colophon" class="site-footer">
 					<div class="site-info">
