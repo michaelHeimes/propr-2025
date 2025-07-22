@@ -19,7 +19,7 @@ body {
 		}
 		.gfield {		
 			.gform-field-label {
-				@extend .h2;
+				@extend .has-medium-font-size;
 				margin-bottom: clamp(1.4rem, 1.254rem + 0.621vw, 2rem);
 				span.gfield_required {
 					color: $black;
@@ -53,10 +53,15 @@ body {
 			&.gfield--type-radio {
 				.gfield_radio .gchoice {
 					margin: 0;
+					flex: 1 0 calc(33.333% - 40px);
+					.gfield-choice-input {
+						transform: translateY(clamp(-0.263rem, -0.235rem + -0.117vw, -0.375rem));
+					}
 				}
 			}
 			&.gfield--type-choice .gfield_radio {
 				flex-direction: row;
+				flex-wrap: wrap;
 			}
 		}
 		.gform_button.button {

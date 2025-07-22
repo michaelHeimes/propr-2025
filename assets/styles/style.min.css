@@ -680,7 +680,7 @@ small {
 }
 
 h1, .h1,
-h2, .h2, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required, body .gform-theme--foundation .gfield .gform-field-label,
+h2, .h2, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required,
 h3, .h3,
 h4, .h4,
 h5, .h5,
@@ -692,7 +692,7 @@ h6, .h6 {
   text-rendering: optimizeLegibility;
 }
 h1 small, .h1 small,
-h2 small, .h2 small, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required small, body .gform-theme--foundation .gfield .gform-field-label small,
+h2 small, .h2 small, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required small,
 h3 small, .h3 small,
 h4 small, .h4 small,
 h5 small, .h5 small,
@@ -708,7 +708,7 @@ h1, .h1 {
   margin-bottom: 0.5rem;
 }
 
-h2, .h2, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required, body .gform-theme--foundation .gfield .gform-field-label {
+h2, .h2, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required {
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 0;
@@ -747,7 +747,7 @@ h6, .h6 {
   h1, .h1 {
     font-size: 3rem;
   }
-  h2, .h2, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required, body .gform-theme--foundation .gfield .gform-field-label {
+  h2, .h2, body .gform-theme--foundation .gfield .gform-field-label span.gfield_required {
     font-size: 2.5rem;
   }
   h3, .h3 {
@@ -7098,7 +7098,7 @@ body .gform-theme.gform-theme--framework.gform_wrapper :where(:not(.mce-splitbtn
   letter-spacing: -0.015em;
 }
 
-.has-medium-font-size {
+.has-medium-font-size, body .gform-theme--foundation .gfield .gform-field-label {
   font-size: clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem);
 }
 
@@ -7145,7 +7145,6 @@ h1.no-top-spacing,
 h2.no-top-spacing,
 .h2.no-top-spacing,
 body .gform-theme--foundation .gfield .gform-field-label span.no-top-spacing.gfield_required,
-body .gform-theme--foundation .gfield .no-top-spacing.gform-field-label,
 h3.no-top-spacing,
 .h3.no-top-spacing,
 h4.no-top-spacing,
@@ -7159,7 +7158,6 @@ h1.no-bottom-spacing,
 h2.no-bottom-spacing,
 .h2.no-bottom-spacing,
 body .gform-theme--foundation .gfield .gform-field-label span.no-bottom-spacing.gfield_required,
-body .gform-theme--foundation .gfield .no-bottom-spacing.gform-field-label,
 h3.no-bottom-spacing,
 .h3.no-bottom-spacing,
 h4.no-bottom-spacing,
@@ -7179,8 +7177,7 @@ h1,
 
 h2,
 .h2,
-body .gform-theme--foundation .gfield .gform-field-label span.gfield_required,
-body .gform-theme--foundation .gfield .gform-field-label {
+body .gform-theme--foundation .gfield .gform-field-label span.gfield_required {
   font-size: clamp(2.188rem, 1.961rem + 0.97vw, 3.125rem);
   line-height: 1.2;
   font-weight: 500;
@@ -7558,12 +7555,21 @@ body .gform-theme--foundation .gfield textarea {
 }
 body .gform-theme--foundation .gfield.gfield--type-radio .gfield_radio .gchoice {
   margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(33.333% - 40px);
+          flex: 1 0 calc(33.333% - 40px);
+}
+body .gform-theme--foundation .gfield.gfield--type-radio .gfield_radio .gchoice .gfield-choice-input {
+  -webkit-transform: translateY(clamp(-0.263rem, -0.235rem - 0.117vw, -0.375rem));
+          transform: translateY(clamp(-0.263rem, -0.235rem - 0.117vw, -0.375rem));
 }
 body .gform-theme--foundation .gfield.gfield--type-choice .gfield_radio {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 body .gform-theme--foundation .gform_button.button span, body .gform-theme--foundation .gform_button.wp-element-button span,
 body .gform-theme--foundation .gform_button.wp-block-button__link span {
