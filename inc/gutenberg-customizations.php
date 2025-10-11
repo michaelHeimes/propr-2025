@@ -1,20 +1,20 @@
 <?php
 add_theme_support( 'editor-font-sizes', array(
 	[
-		'name' => __( 'Small', 'textdomain' ),
-		'shortName' => __( 'S', 'textdomain' ),
+		'name' => __( 'Small', 'trailhead' ),
+		'shortName' => __( 'S', 'trailhead' ),
 		'slug' => 'small',
 		'size' => 'clamp(0.938rem, 0.893rem + 0.194vw, 1.125rem)',
 	],
 	[
-		'name' => __( 'Medium', 'textdomain' ),
-		'shortName' => __( 'M', 'textdomain' ),
+		'name' => __( 'Medium', 'trailhead' ),
+		'shortName' => __( 'M', 'trailhead' ),
 		'slug' => 'medium',
 		'size' => 'clamp(1.125rem, 0.943rem + 0.777vw, 1.875rem)',
 	],
 	[
-		'name' => __( 'Large', 'textdomain' ),
-		'shortName' => __( 'L', 'textdomain' ),
+		'name' => __( 'Large', 'trailhead' ),
+		'shortName' => __( 'L', 'trailhead' ),
 		'slug' => 'large',
 		'size' => 'clamp(2.188rem, 1.961rem + 0.97vw, 3.125rem)',
 	],
